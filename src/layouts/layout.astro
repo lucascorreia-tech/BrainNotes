@@ -1,0 +1,16 @@
+---
+import "../styles/global.css";
+import Header from "../layouts/header.astro"
+---
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="antialiased min-h-screen bg-light-theme dark:bg-dark-theme">
+    <Header />
+    <slot />
+</body>
+</html>
