@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap"');
+
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+    --font-Bungee: "Bungee", sans-serif;
     --color-light-theme: #f8fafc;
     --color-dark-theme: #020617;
+    --color-search-border: #181368;
+    --color-search-inter: #18182f; 
 }
