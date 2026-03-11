@@ -12,6 +12,7 @@
   
   themeToggle?.addEventListener('click', ()=> {
     htmlElement.classList.toggle('dark');
+    
     const newTheme = htmlElement.classList.contains('dark')?'dark':'light';
     localStorage.setItem('theme', newTheme)
   });

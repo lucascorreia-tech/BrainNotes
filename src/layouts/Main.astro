@@ -1,0 +1,53 @@
+---
+const allPosts = import.meta.glob("../**/*.md", {eager:true})
+const posts = Object.values(allPosts);
+const getPostsByFolder = (folderName: string) => {
+  return posts.filter((post: any) => post.file.includes(folderName));
+}
+
+const redePosts = getPostsByFolder("implementacao_de_rede");
+const devPosts = getPostsByFolder("desenvolvimento_de_software");
+---
+<main class="w-[90%] md:w-[35%] h-max  text-black dark:text-white m-auto py-10">
+    <div class="text-center mb-14">
+        <p class="text-4xl md:text-5xl font-bold tracking-tighter font-title">
+            Brain Notes
+        </p>
+        <p class="mt-2 text-slate-500 font-body uppercase tracking-widest text-sm">
+            Resumo das aulas
+        </p>
+    </div>
+    <section class="mb-20">
+        <h2 class="text-2xl font-bold tracking-tight mb-2">
+            Implementação de Redes
+        </h2>
+        <hr class="border-slate-300 dark:border-slate-800 mb-6" />
+        <ul class="list-disc list-inside space-y-3 marker:text-slate-400 dark:marker:text-slate-600">
+            {
+            redePosts.map((post: any) => (
+              <li class="text-blue-600 dark:text-blue-400 text-xl">
+                  <a href={post.url} class="underline decoration-blue-500/30 hover:decoration-blue-500 underline-offset-4">
+                      {post.frontmatter.title || "Semana sem Título"}
+                  </a>
+              </li>
+            ))
+            }
+        </ul>
+    </section>
+    <section>
+        <h2 class="text-2xl font-bold tracking-tight mb-2">
+            Desenvolvimento de Sistemas
+        </h2>
+        <hr class="border-slate-300 dark:border-slate-800 mb-6" />
+        
+        <ul class="list-disc list-inside space-y-3 marker:text-slate-400 dark:marker:text-slate-600">
+            {devPosts.map((post: any) => (
+                <li class="text-blue-600 dark:text-blue-400 text-xl">
+                    <a href={post.url} class="underline decoration-blue-500/30 hover:decoration-blue-500 underline-offset-4">
+                        {post.frontmatter.title || "Semana sem Título"}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </section>
+</main>
