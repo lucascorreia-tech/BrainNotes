@@ -20,20 +20,30 @@
     body {
         font-family: var(--font-body)
     }
+    
     .prose h1 {
         margin-top: 0 !important; 
-        margin-bottom: 0.5rem !important; 
-        @apply text-3xl font-bold tracking-tight;
+        margin-bottom: 0.3rem !important; 
+        @apply !text-3xl font-bold tracking-tight;
+    }
+    
+    .prose p {
+        @apply text-lg tracking-tight;
     }
     
     
     .prose hr {
-            margin-top: 1rem !important; 
-            margin-bottom: 2rem !important;
-            border-color: #cbd5e1;
-            opacity: 1 !important;
-            border-width: 1px !important;
-        }
+        margin-top: 0.2rem !important; 
+        margin-bottom: 2rem !important;
+        border-color: #cbd5e1;
+        opacity: 1 !important;
+        border-width: 1px !important;
+    }
+    
+    .prose img{
+        display: block;
+        margin: 0 auto;
+    }
     
         
     .dark .prose hr {

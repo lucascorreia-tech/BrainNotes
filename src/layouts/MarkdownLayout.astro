@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "./BaseLayout.astro"
+const { frontmatter } = Astro.props;
 ---
 <BaseLayout>
+    <h1 class="max-w-3xl mx-auto px-6 py-10 text-3xl font-title text-center tracking-tighter">{frontmatter.name}</h1>
     <main class="max-w-3xl mx-auto px-6 py-10 prose dark:prose-invert">
         <slot />
     </main>
