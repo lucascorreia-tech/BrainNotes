@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @plugin "@tailwindcss/typography";
 
@@ -13,40 +13,38 @@
     --color-light-theme: #f8fafc;
     --color-dark-theme: #020617;
     --color-search-border: #181368;
-    --color-search-inter: #18182f; 
+    --color-search-inter: #18182f;
 }
 
 @layer base {
     body {
-        font-family: var(--font-body)
+        font-family: var(--font-body);
     }
-    
+
     .prose h1 {
-        margin-top: 0 !important; 
-        margin-bottom: 0.3rem !important; 
+        margin-top: 0 !important;
+        margin-bottom: 0.3rem !important;
         @apply !text-3xl font-bold tracking-tight;
     }
-    
+
     .prose p {
         @apply text-lg tracking-tight;
     }
-    
-    
+
     .prose hr {
-        margin-top: 0.2rem !important; 
+        margin-top: 0.2rem !important;
         margin-bottom: 2rem !important;
         border-color: #cbd5e1;
         opacity: 1 !important;
         border-width: 1px !important;
     }
-    
-    .prose img{
+
+    .prose img {
         display: block;
         margin: 0 auto;
     }
-    
-        
+
     .dark .prose hr {
-        border-color: #1e293b !important; 
+        border-color: #1e293b !important;
     }
 }

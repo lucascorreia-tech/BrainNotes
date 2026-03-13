@@ -1,19 +1,23 @@
 <button id="toggle-theme" class="p-2 cursor-pointer flex">
-    <i class="inline-block w-7 h-7 bg-[url('../assets/light.png')] dark:bg-[url('../assets/dark.png')] bg-contain"></i>
+    <i
+        class="inline-block w-7 h-7 bg-[url('../assets/light.png')] dark:bg-[url('../assets/dark.png')] bg-contain"
+    ></i>
 </button>
 
 <script>
-  const themeToggle = document.getElementById('toggle-theme');
-  const htmlElement = document.documentElement;
-  
-  if(localStorage.getItem('theme') === 'dark'){
-    htmlElement.classList.add('dark')
-  }
-  
-  themeToggle?.addEventListener('click', ()=> {
-    htmlElement.classList.toggle('dark');
-    
-    const newTheme = htmlElement.classList.contains('dark')?'dark':'light';
-    localStorage.setItem('theme', newTheme)
-  });
+    const themeToggle = document.getElementById("toggle-theme");
+    const htmlElement = document.documentElement;
+
+    if (localStorage.getItem("theme") === "dark") {
+        htmlElement.classList.add("dark");
+    }
+
+    themeToggle?.addEventListener("click", () => {
+        htmlElement.classList.toggle("dark");
+
+        const newTheme = htmlElement.classList.contains("dark")
+            ? "dark"
+            : "light";
+        localStorage.setItem("theme", newTheme);
+    });
 </script>
