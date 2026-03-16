@@ -61,3 +61,32 @@ No entando, os dados não "voam" de uma camada para outra horizontalmente; cada 
 ![Camadas de Protocolos](../../assets/Semana1/camadas_protocolos.webp)
 
 # Modelo de referência OSI
+----
+A ISO propôs o Modelo OSI (Interconex~~ao de Sistemas Abertos) como um guia de sete camadas para a padronização internacional. É crucial entender que ele é um modelo de referência e não uma arquitetura engessada; ele não diz qual protocolo usar, apenas dita as obrigações e o que cada camada deve executar.
+- **Camda Física** -> Cuida dos volts da duração dos sinais e da transmissão bruta dos bits no cabo
+- **Camada de Enlace de dados** -> Tenta transformar essa via ruidosa em um canal livre de falhas, criando quadros, identificado limites e resolvendo danos na transmissão.
+- **Camada de Rede** -> Assume o roteamento do pacote, descobrindo como enviá-lo da origem ao destino, resolvendo gargalos e lidando com endereçamentos lógicos.
+- **Camada de Transporte** -> Recebe tudo, fragmenta e passa adiante, isolando os níveis superiores de dores de cabeça como pacotes perdidos ou entregues fora de ordem, servido de ponte direta fim a fim.
+- **Camada de Sessão** -> Gerencia as conversas, impedindo atropelos de requisições simultâneas e marcando pontos de sincronização para retomadas em caso de queda.
+- **Camada de Apresentação** -> Traduz a sintaxe, criptografia a segurança e comprime o tamanho, resolvendo diferenças entre máquinas diversas.
+- **Camada de Aplicação** -> Hospeda os processos do usuário e dá entrada para o mundo palpável do software e dos serviços de rede. E mesmo com a viagem vertical do dado até o hardware, tudo na programação é pensando de forma horizontal.
+
+# Arquitetura TCP/IP
+----
+Foi movida pela urgência da defesa americana, sendo baseada na antiga rede de pesquisa ARPANET, essa arquitetura surguiu da necessidade de conectar múltiplas redes mantendo a infraestrutura resistente a destruições físicas ou quedas repetinas de rotas.
+
+Composta por apenas quatro divisões, a arquitetura foi moldada a partir de protocolos que já existiam na prática. O andar superior abriga a **Camada de Aplicação**, agrupando protocolos de alto escalão do dia a dia da web como o HTPP,FTP,SMTP e DNS.
+
+A **Camada de Transporte** garante o papo fim a fim usando o imbatíivel TCP para envios perfeitos e sem erros (embora ligeiramente mais lentos devido à checagem constante), e o despojado UDP, que é não confiável, não possui conexão, mas reina soberano onde a integra imediata vale mais que a precisão.
+
+O pilar central de toda a arquitetura é a **Camada Inter-redes**, responsável por injetar de forma oficial o pacote IP e fazê-lo navegar roteado por qualquer tipo de terreno para chegar ao seu objetivo.
+
+No nível inferior reside a **Camada Host/Rede**, um campo aberto focado unicamente no protocolo nativo da máquina para conectá-la ao cabo ou rádio sem definir restrições universais.
+
+![OSI x TCP/IP](../../assets/Semana1/TCP_IP.png)
+
+# Internet
+----
+Ela é composta pela sua periferia, abrigando sistemas finais como servidores pesasdos em datacenters gigantes e as centenas de bilhões de clientes na forma de notebooks, smartphones e caros conectados. Para que essa borda faça contato com o núcleo, esses hospedeiros acessam os Provedores de Serviços de Internet (ISPs) regionais e globais, trafegando os dados em pacotes por comutadores complexos e enlaces vigorosos.
+
+No fim do dia, a comunicação bem-sucessidade, como o simples ato de um script solicitar um website na porta 80, só ocorre porque protocolos estruturados garantem o formato, as ações recebidas e a ordem exata de envio dessa fantástica rede global.
