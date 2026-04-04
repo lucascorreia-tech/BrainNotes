@@ -45,29 +45,6 @@ const bancoPosts = getPostsByFolder("banco_de_dados");
     </section>
     <section>
         <h2 class="text-2xl font-bold tracking-tight mb-2">
-            Desenvolvimento de Sistemas
-        </h2>
-        <hr class="border-slate-300 dark:border-slate-800 mb-6" />
-
-        <ul
-            class="list-disc list-inside space-y-3 marker:text-slate-400 dark:marker:text-slate-600"
-        >
-            {
-                devPosts.map((post: any) => (
-                    <li class="text-blue-600 dark:text-blue-400 text-xl">
-                        <a
-                            href={post.url}
-                            class="underline decoration-blue-500/30 hover:decoration-blue-500 underline-offset-4"
-                        >
-                            {post.frontmatter.title || "Semana sem Título"}
-                        </a>
-                    </li>
-                ))
-            }
-        </ul>
-    </section>
-    <section>
-        <h2 class="text-2xl font-bold tracking-tight mb-2">
             Modelagem e implementaçao de banco de dados
         </h2>
         <hr class="border-slate-300 dark:border-slate-800 mb-6" />
