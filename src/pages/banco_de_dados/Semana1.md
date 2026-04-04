@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
 title: Semana 1
-name: Introdução a Modelagem Conceitual
+name: "Introdução a Modelagem Conceitual"
 ---
 
 # Semana 1

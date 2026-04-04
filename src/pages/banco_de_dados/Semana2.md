@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
 title: Semana 2
-name: Relacionamento entre entidades
+name: "Relacionamento entre entidades"
 ---
 
 # Relacionamentos

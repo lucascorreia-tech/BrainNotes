@@ -7,6 +7,7 @@ const getPostsByFolder = (folderName: string) => {
 
 const redePosts = getPostsByFolder("implementacao_de_rede");
 const devPosts = getPostsByFolder("desenvolvimento_de_software");
+const bancoPosts = getPostsByFolder("banco_de_dados");
 ---
 
 <main class="w-[90%] md:w-[35%] h-max text-black dark:text-white m-auto py-10">
@@ -53,6 +54,29 @@ const devPosts = getPostsByFolder("desenvolvimento_de_software");
         >
             {
                 devPosts.map((post: any) => (
+                    <li class="text-blue-600 dark:text-blue-400 text-xl">
+                        <a
+                            href={post.url}
+                            class="underline decoration-blue-500/30 hover:decoration-blue-500 underline-offset-4"
+                        >
+                            {post.frontmatter.title || "Semana sem Título"}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+    <section>
+        <h2 class="text-2xl font-bold tracking-tight mb-2">
+            Modelagem e implementaçao de banco de dados
+        </h2>
+        <hr class="border-slate-300 dark:border-slate-800 mb-6" />
+
+        <ul
+            class="list-disc list-inside space-y-3 marker:text-slate-400 dark:marker:text-slate-600"
+        >
+            {
+                bancoPosts.map((post: any) => (
                     <li class="text-blue-600 dark:text-blue-400 text-xl">
                         <a
                             href={post.url}
